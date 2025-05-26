@@ -138,7 +138,36 @@
         color: white;
         margin-bottom: 20px;
     }
+  /* Skills Section */
+  .Education {
+        padding: 100px 80px;
+        background: #100f0f;
+        height: 600px;
+    }
 
+    .Education-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .Education-card {
+        background: #1a1a1a;
+        padding: 30px;
+        border-radius: 15px;
+        transition: transform 0.3s;
+    }
+
+    .Education-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .Education-icon {
+        font-size: 45px;
+        color: white;
+        margin-bottom: 22px;
+    }
     /* Projects Section */
     .projects {
         padding: 100px 80px;
@@ -170,6 +199,39 @@
     }
 
     .project-content {
+        padding: 20px;
+    }
+    /* Projects Section */
+    .workshops {
+        padding: 100px 80px;
+        height: 800px;
+    }
+
+    .workshops-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .workshops-card {
+        background: #1a1a1a;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .workshops-card:hover {
+        transform: translateY(-3px);
+    }
+
+    .workshops-image {
+        width: 70%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .workshops-content {
         padding: 20px;
     }
 
@@ -363,8 +425,10 @@ window.onclick = function (event) {
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#Education">Education</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#workshops">Workshops & Trainings</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -395,7 +459,25 @@ window.onclick = function (event) {
             <a href="https://drive.google.com/file/d/1Q0fwG8i-pw88mv7K3c30jTpyKMEW0whn/view?usp=sharing" class="btn" target="_blank">Download My Resume</a>
         </div>
     </section>
+        <!-- Education-->
+    <section id="Education" class="Education">
+        <h2 class="section-title">Education</h2>
+        <div class="Education-grid">
+            <div class="Education-card">
+                <h3>BSc. Geospatial Information Science and Remote Sensing</h3><br>
+                <p>Grade: Second Class Honours (Upper Division)</p><br>
+                <p>Dedan Kimathi University of Technology</p><br>
+                <p><em>Oct 2021 - Jan 2025</em></p>
+            </div>
+            <div class="Education-card">
+                <h3>Certificate in Understanding Space</h3><br>
+                <p>Grade: Distinction</p><br>
+                <p>Teaching Science & Technology Inc.</p><br>
+                <p><em>July 2024 - August 2024</em></p>
+            </div>
 
+        </div>
+    </section>
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <h2 class="section-title">My Skills</h2>
@@ -628,8 +710,77 @@ window.onclick = function (event) {
             <br><h3>Status:</h3>Completed, Ongoing<p></p>
     </div>
 </div>
+<!-- Modal 10:Young scholars award -->
+<div id="modal10" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal9')">&times;</span>
+        <img src="young scholars award.jpg" alt="ESRI East Africa 2025 Young Scholars Program" class="modal-image">
+        <h2>Esri East Africa 2025 Young Scholars Program</h2>
+        <p>I presented my award-winning project for the 
+            Esri East Africa 2025 Young Scholars Program. 
+            I emerged position 2 upon presenting my project titled; 
+            "Development of a Drought Monitoring System Encoupling Google Earth Engine & Machine Learning Algorithms" 
+            in front of a panel of judges and other 17 nominees from Kenyan Universities.</p>        
+            <br><em>11th April 2025</em></p>
+    </div>
+</div>
+<!-- Modal 11:Esri EUC 2025 -->
+<div id="modal11" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal11')">&times;</span>
+        <img src="Esri euc 2025.jpg" alt="ESRI Eastern Africa Users Conference 2025" class="modal-image">
+        <h2>Esri Eastern Africa Users Conference 2025</h2>
+        <p>As one of the presenters during the EUC 2025,
+            I was previlenged to showcase my work on
+            "Development of a Drought Monitoring System  using Machine Learning Algorithms"
+            in line with GIS for Agriculture and Sustainable Development.</p>        
+            <br><em>7th - 8th May 2025</em></p>
+    </div>
+</div>
+
+<!-- Workshops Section -->
+<section id="workshops" class="workshops">
+    <h2 class="section-title">Presentations, Workshops & Trainings</h2>
+    <div class="workshops-grid">
+
+        <div class="workshops-card" onclick="openModal('modal10')">
+            <img src="young scholars award.jpg" alt="ESRI East Africa 2025 Young Scholars Program" class="workshops-image">
+            <div class="workshops-content">
+                <h3>Esri East Africa 2025 Young Scholars Program</h3>
+                <p style="text-align: justify;">I presented my award-winning project for the 
+                    ESRI East Africa 2025 Young Scholars Program. 
+                    I emerged position 2 upon presenting my project titled; 
+                    "Development of a Drought Monitoring System Encoupling Google Earth Engine & Machine Learning Algorithms" 
+                    in front of a panel of judges and other 17 nominees from Kenyan Universities.</p>
+                <br><em>11th April 2025</em></p>
+            </div>
+        </div>
+
+        <!-- <div class="workshops-card" onclick="openModal('modal2')">
+            <img src="Peter.Thuku-calliopemini.jpg" alt="MC2FM Learners Workshops in Schools" class="workshops-image">
+            <div class="workshops-content">
+                <h3>MC2FM Learners Workshops in Schools</h3>
+                <p style="text-align: justify;">Facilitated by the BMBF-MC2FM Project, I actively participated in the 3-Day workshops held in 6 primary schools within the Muringato Catchment. I conducted trainings to learners on the applications of Calliope Mini including how satellites capture light reflections from the Earth.</p>
+                <br><em>4th - 6th March 2025</em></p>
+            </div>
+        </div> -->
 
 
+        <div class="workshops-card" onclick="openModal('modal11')">
+            <img src="Esri euc 2025.jpg" alt="ESRI Eastern Africa Users Conference" class="workshops-image">
+            <div class="workshops-content">
+                <h3>Esri Eastern Africa Users Conference 2025</h3>
+                <p style="text-align: justify;">As one of the presenters during the EUC 2025,
+                    I was previlenged to showcase my work on
+                    "Development of a Drought Monitoring System  using Machine Learning Algorithms"
+                    in line with GIS for Agriculture and Sustainable Development. </p>
+                <br><em>7th - 8th May 2025</em></p>
+            </div>
+        </div>
+
+        
+    </div>
+</section>
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2 class="section-title">Get In Touch</h2>
